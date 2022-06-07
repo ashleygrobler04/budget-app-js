@@ -1,7 +1,7 @@
+let tabel = document.getElementById("expenseInfo");
 let expenses = [];
 let income = document.getElementById("income").value;
 const btnCalculate = document.getElementById("Calculate");
-let tabel = document.getElementById("expenseInfo");
 let totalSpent = document.getElementById("total");
 
 getTotalSpent = (arr) => {
@@ -12,23 +12,24 @@ getTotalSpent = (arr) => {
   return amount;
 };
 
-addExpense = (expense, price) => {
-  const cat = document.getElementById("category").value;
+addExpense = (expense, price, category) => {
   let rowCount = tabel.rows.length;
   let expenseObject = new Object();
   expenseObject.expense = expense;
   expenseObject.price = price;
+  expenseObject.category = category;
   expenses.push(expenseObject);
   //add the expense and price fields to the tabel and add a 'remove' button with id 'remove'
   let r = tabel.insertRow(rowCount);
   r.insertCell(0).textContent = expenses[rowCount].expense;
   r.insertCell(1).textContent = expenses[rowCount].price;
-  r.insertCell(2).textContent = cat;
+  r.insertCell(2).textContent = expenses[rowCount].category;
   const btnRemove = document.createElement("button");
   btnRemove.setAttribute("id", "remove");
   btnRemove.innerHTML = "Remove";
   btnRemove.addEventListener("click", () => {
-    let selectedRow = tabel.rowIndex;
+    let selectedRow = r.rowIndex - 1;
+    alert(`The selected row is ${selectedRow}`);
     expenses.splice(selectedRow, 1);
     tabel.deleteRow(selectedRow);
     totalSpent.innerHTML = getTotalSpent(expenses);
@@ -41,9 +42,11 @@ isInRange = (value, arr) => {
   return getTotalSpent(expenses) <= value;
 };
 btnCalculate.addEventListener("click", () => {
+  const cat = document.getElementById("category").value;
   addExpense(
     document.getElementById("expense").value,
-    document.getElementById("price").value
+    document.getElementById("price").value,
+    cat
   );
   let status = isInRange(document.getElementById("income").value, expenses)
     ? "in Range"
