@@ -29,7 +29,6 @@ addExpense = (expense, price, category) => {
   btnRemove.innerHTML = "Remove";
   btnRemove.addEventListener("click", () => {
     let selectedRow = r.rowIndex - 1;
-    alert(`The selected row is ${selectedRow}`);
     expenses.splice(selectedRow, 1);
     tabel.deleteRow(selectedRow);
     totalSpent.innerHTML = getTotalSpent(expenses);
@@ -55,3 +54,6 @@ btnCalculate.addEventListener("click", () => {
 });
 
 //ToDo: add the functionality to show totals for each category and improve the program a little more.
+//Add the categories in different arrays using destructuring.
+//implement functionality to return all categories in use.
+//display category totals based on categories in use.
