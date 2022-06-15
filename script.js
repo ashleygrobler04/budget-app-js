@@ -53,7 +53,14 @@ btnCalculate.addEventListener("click", () => {
   totalSpent.innerHTML = `${status} Spent ${getTotalSpent(expenses)}`;
 });
 
-//ToDo: add the functionality to show totals for each category and improve the program a little more.
-//Add the categories in different arrays using destructuring.
-//implement functionality to return all categories in use.
-//display category totals based on categories in use.
+//A function that checks how many times a category appears in a given list of objects.
+
+countItems = (arr, item) => {
+  let count = 0;
+  for (let i of arr) {
+    if (i.category === item) {
+      count += 1;
+    }
+  }
+  return count;
+};
