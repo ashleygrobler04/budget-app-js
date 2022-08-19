@@ -1,46 +1,46 @@
 #form {
-  display: inline;
-  color: white;
-  width: auto;
+    display: inline;
+    color: white;
+    width: auto;
 }
 #income {
-  display: block;
-  color: black;
+    display: block;
+    color: black;
 }
 #expense {
-  display: block;
-  color: black;
+    display: block;
+    color: black;
 }
 #price {
-  display: block;
-  color: black;
+    display: block;
+    color: black;
 }
 #category {
-  display: block;
-  color: black;
+    display: block;
+    color: black;
 }
 body {
-  background-color: white;
-  margin-left: 10px;
-  margin-right: 10px;
-  margin-top: 40px;
-  font-size: 16pt;
+    background-color: white;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 40px;
+    font-size: 16pt;
 }
 table {
-  border: 5px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: auto;
-  margin-bottom: auto;
-  table-layout: auto;
-  width: auto;
-  color: black;
-  border-spacing: 20px;
+    border: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    table-layout: auto;
+    width: auto;
+    color: black;
+    border-spacing: 20px;
 }
 #total {
-  display: block;
-  color: black;
+    display: block;
+    color: black;
 }
 label {
-  color: black;
+    color: black;
 }
