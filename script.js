@@ -25,9 +25,12 @@ addExpense = (expense, price, category) => {
     expenses.splice(selectedRow, 1);
     tabel.deleteRow(selectedRow);
     totalSpent.innerHTML = `${total}`;
+    document.getElementById("remaining").innerHTML = `Remaining: ${
+      document.getElementById("income").value - total
+    }`;
+    total = expenses.reduce((prev, cur) => prev + cur.price, 0);
   });
   r.insertCell(3).append(btnRemove);
-  total = expenses.reduce((prev, cur) => prev + cur.price, 0);
 };
 
 isInRange = (value, arr) => {
@@ -63,6 +66,10 @@ btnCalculate.addEventListener("click", () => {
     ? "in Range"
     : "Out of range";
   totalSpent.innerHTML = `${status} Spent ${total}`;
+  document.getElementById("remaining").innerHTML = `Remaining: ${
+    document.getElementById("income").value - total
+  }`;
+  total = expenses.reduce((prev, cur) => prev + cur.price, 0);
 });
 
 addTotalByCategory = (category) => {
