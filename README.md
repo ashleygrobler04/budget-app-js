@@ -2,8 +2,9 @@
 Allows you to calculate your budget from anywhere.
 ## Improvements
 * Styling can be improved
-* Add the option to edit an expense
-* Use an actual form to process input
+* Use an actual form to process input for adding expenses
+* save expenses to local storage
+*refactor code a lot.
 
 ## How does this work?
 Enter the required values in each text field. Once you click the "calculate" button, your budget is being updated. 
