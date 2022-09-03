@@ -1,51 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Budget app</title>
-    <link rel="stylesheet" href="./styles.css" />
-  </head>
-  <body>
-    <h1>calculate your budget for free!</h1>
-    <p id="remaining">0</p>
-    <table>
-      <thead>
-        <tr>
-          <th>Expense</th>
-          <th>Price</th>
-          <th>Category</th>
-          <th>Remove</th>
-        </tr>
-      </thead>
-      <tbody id="expenseInfo"></tbody>
-    </table>
-    <p id="total"></p>
-    <div id="form">
-      <label for="income"> Enter income</label>
-      <input type="text" id="income" /><br />
-      <label for="expense">Enter an expense</label>
-      <input type="text" id="expense" /><br />
-      <label for="price">Enter a price</label>
-      <input type="text" id="price" /><br />
-      <label for="category">Choose a category</label>
-      <select id="category">
-        <option>Savings</option>
-        <option>Housing</option>
-        <option>Transportation</option>
-        <option>Food</option>
-        <option>Utilities</option>
-        <option>Insurance</option>
-        <option>Medical</option>
-        <option>Personal spending</option>
-        <option>Recreation</option>
-        <option>Miscellaneous</option>
-      </select>
-      <br />
-      <button id="Calculate">Calculate</button>
-      <ul id="totals"></ul>
-    </div>
-    <script src="./script.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Budget app</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body class="main">
+  <h1>calculate your budget for free!</h1>
+  <p id="remaining">0</p>
+  <table>
+    <thead>
+      <tr>
+        <th>Expense</th>
+        <th>Price</th>
+        <th>Category</th>
+        <th>Remove</th>
+      </tr>
+    </thead>
+    <tbody id="expenseInfo"></tbody>
+  </table>
+  <p id="total"></p>
+  <div id="form">
+    <label for="income"> Enter income</label>
+    <input type="text" id="income" /><br />
+    <label for="expense">Enter an expense</label>
+    <input type="text" id="expense" /><br />
+    <label for="price">Enter a price</label>
+    <input type="text" id="price" /><br />
+    <label for="category">Choose a category</label>
+    <select id="category">
+      <option>Savings</option>
+      <option>Housing</option>
+      <option>Transportation</option>
+      <option>Food</option>
+      <option>Utilities</option>
+      <option>Insurance</option>
+      <option>Medical</option>
+      <option>Personal spending</option>
+      <option>Recreation</option>
+      <option>Miscellaneous</option>
+    </select>
+    <br />
+    <button id="Calculate">Calculate</button>
+    <ul id="totals"></ul>
+  </div>
+  <script src="./script.js"></script>
+  <!-- The form that handles editing the selected expense -->
+  <!-- <form class="edit">
+    <input type="text" placeholder="Enter new expense title" id="expense-item" /><br />
+    <input type="text" placeholder="Enter new expense price" id="expense-price" />
+    <select id="category">
+      <option>Savings</option>
+      <option>Housing</option>
+      <option>Transportation</option>
+      <option>Food</option>
+      <option>Utilities</option>
+      <option>Insurance</option>
+      <option>Medical</option>
+      <option>Personal spending</option>
+      <option>Recreation</option>
+      <option>Miscellaneous</option>
+    </select>
+    <input type="submit" value="Update expense" />
+  </form> -->
+</body>
+
 </html>
