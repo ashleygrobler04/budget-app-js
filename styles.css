@@ -3,22 +3,27 @@
     color: white;
     width: auto;
 }
+
 #income {
     display: block;
     color: black;
 }
+
 #expense {
     display: block;
     color: black;
 }
+
 #price {
     display: block;
     color: black;
 }
+
 #category {
     display: block;
     color: black;
 }
+
 body {
     background-color: white;
     margin-left: 10px;
@@ -26,6 +31,7 @@ body {
     margin-top: 40px;
     font-size: 16pt;
 }
+
 table {
     border: 5px;
     margin-left: auto;
@@ -37,10 +43,16 @@ table {
     color: black;
     border-spacing: 20px;
 }
+
 #total {
     display: block;
     color: black;
 }
+
 label {
     color: black;
+}
+
+.edit {
+    display: none;
 }

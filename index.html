@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="./styles.css" />
 </head>
 
-<body class="main">
+<body>
   <h1>calculate your budget for free!</h1>
   <p id="remaining">0</p>
   <table>
@@ -19,6 +19,7 @@
         <th>Price</th>
         <th>Category</th>
         <th>Remove</th>
+        <th>Edit</th>
       </tr>
     </thead>
     <tbody id="expenseInfo"></tbody>
@@ -50,7 +51,7 @@
   </div>
   <script src="./script.js"></script>
   <!-- The form that handles editing the selected expense -->
-  <!-- <form class="edit">
+  <form class="edit" id="edit">
     <input type="text" placeholder="Enter new expense title" id="expense-item" /><br />
     <input type="text" placeholder="Enter new expense price" id="expense-price" />
     <select id="category">
@@ -65,8 +66,8 @@
       <option>Recreation</option>
       <option>Miscellaneous</option>
     </select>
-    <input type="submit" value="Update expense" />
-  </form> -->
+    <input type="submit" value="Update expense" id="btnUpdateExpense" />
+  </form>
 </body>
 
 </html>

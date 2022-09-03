@@ -31,6 +31,14 @@ addExpense = (expense, price, category) => {
     total = expenses.reduce((prev, cur) => prev + cur.price, 0);
   });
   r.insertCell(3).append(btnRemove);
+  const btnEdit = document.createElement("button");
+  btnEdit.id = "btn-edit";
+  btnEdit.innerHTML = "Edit";
+  btnEdit.addEventListener("click", () => {
+    document.getElementById("form").style.display = "none";
+    document.getElementById("edit").style.display = "block";
+  });
+  r.insertCell(4).append(btnEdit);
 };
 
 isInRange = (value, arr) => {
@@ -81,3 +89,8 @@ addTotalByCategory = (category) => {
   }
   return total;
 };
+document.getElementById("btnUpdateExpense").addEventListener("click", (e) => {
+  e.preventDefault();
+  document.getElementById("edit").style.display = "none";
+  document.getElementById("form").style.display = "block";
+});
