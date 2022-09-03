@@ -49,12 +49,11 @@
     <button id="Calculate">Calculate</button>
     <ul id="totals"></ul>
   </div>
-  <script src="./script.js"></script>
   <!-- The form that handles editing the selected expense -->
   <form class="edit" id="edit">
     <input type="text" placeholder="Enter new expense title" id="expense-item" /><br />
     <input type="text" placeholder="Enter new expense price" id="expense-price" />
-    <select id="category">
+    <select id="category-update">
       <option>Savings</option>
       <option>Housing</option>
       <option>Transportation</option>
@@ -68,6 +67,7 @@
     </select>
     <input type="submit" value="Update expense" id="btnUpdateExpense" />
   </form>
+  <script src="./script.js"></script>
 </body>
 
 </html>

@@ -39,6 +39,23 @@ addExpense = (expense, price, category) => {
     document.getElementById("edit").style.display = "block";
   });
   r.insertCell(4).append(btnEdit);
+  document.getElementById("btnUpdateExpense").addEventListener("click", (e) => {
+    e.preventDefault();
+    document.getElementById("edit").style.display = "none";
+    document.getElementById("form").style.display = "block";
+    expenses[r.rowIndex - 1].expense =
+      document.getElementById("expense-item").value;
+    expenses[r.rowIndex - 1].price =
+      document.getElementById("expense-price").value;
+    expenses[r.rowIndex - 1].category =
+      document.getElementById("category-update").value;
+    tabel.rows[r.rowIndex - 1].cells[0].innerHTML =
+      expenses[r.rowIndex - 1].expense;
+    tabel.rows[r.rowIndex - 1].cells[1].innerHTML =
+      expenses[r.rowIndex - 1].price;
+    tabel.rows[r.rowIndex - 1].cells[2].innerHTML =
+      expenses[r.rowIndex - 1].category;
+  });
 };
 
 isInRange = (value, arr) => {
@@ -89,8 +106,3 @@ addTotalByCategory = (category) => {
   }
   return total;
 };
-document.getElementById("btnUpdateExpense").addEventListener("click", (e) => {
-  e.preventDefault();
-  document.getElementById("edit").style.display = "none";
-  document.getElementById("form").style.display = "block";
-});
