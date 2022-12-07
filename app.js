@@ -2,6 +2,8 @@ class App {
     constructor() {
         this.expenses = [];
     }
+
+    _addExpense(name, price, category) {}
 }
 
 class Expense {
